@@ -1,0 +1,37 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TEHZEEB FAST FOOD - FINAL REAL MENU - Same to Same</title><style>
+*{margin:0;padding:0;box-sizing:border-box}body{background:#0a0a0a;color:#fff;font-family:system-ui}
+.top{background:#000;display:flex;justify-content:space-between;padding:10px 12px;font-size:11px;border-bottom:1px solid #222;flex-wrap:wrap;gap:6px}
+.head{display:flex;justify-content:space-between;padding:16px}.logo{color:#ff8a2a;font-weight:900;font-size:22px}
+.folders{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 12px 14px}
+.fd{background:#1a1a1a;border:1px solid #ff8a2a66;border-radius:10px;padding:14px 6px;text-align:center;font-size:11px;cursor:pointer}
+.fd.on{background:#ff8a2a;color:#000}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.card{background:#1e1e1e;border-radius:10px;overflow:hidden;border:1px solid #333}.card img{width:100%;height:115px;object-fit:cover;background:#222;display:block}
+.in{padding:8px}.in b{font-size:11px;display:block}.in small{font-size:9px;color:#888}
+.btm{display:flex;justify-content:space-between;margin-top:7px}.pr{color:#ff8a2a;font-weight:900;font-size:11px}
+.add{background:#ff8a2a;color:#000;border:0;padding:5px 12px;border-radius:6px;font-weight:900;font-size:10px;cursor:pointer}
+.sizes{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:6px}.sz{background:#252525;border:1px solid #333;border-radius:6px;padding:5px 2px;font-size:9px;text-align:center;cursor:pointer}
+.sz.on{background:#ff8a2a;color:#000;font-weight:900}.foot{background:#000;border-top:2px solid #ff8a2a;padding:14px;text-align:center;font-size:10px;color:#aaa;line-height:1.5}
+.cartBox{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:94%;max-width:720px;background:#111;border:2px solid #ff8a2a;border-radius:16px;padding:12px;z-index:99}
+.wa{display:block;background:#25D366;color:#fff;text-align:center;padding:11px;border-radius:30px;text-decoration:none;font-weight:900;margin-top:8px}
+.sec{padding:0 12px 18px}.secH{display:flex;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap}.secH h2{font-size:14px}.secH span{color:#ff8a2a;font-size:11px}
+</style></head><body>
+<div class="top"><div>📍 Al Noor Colony, Gojra Road, Jhang Sadar</div><div>💚 0370-6582482</div><div>🕓 04PM-01AM</div></div>
+<div class="head"><div class="logo">🔥 FOODIE - TEHZEEB FAST FOOD</div><div>🛒<span id="cc" style="background:#ff8a2a;color:#000;padding:2px 6px;border-radius:50%;font-size:10px">0</span></div></div>
+<div class="folders">
+<div class="fd on" onclick="filterF('all',this)"><b>ALL ITEMS<br>32+ Items</b></div>
+<div class="fd" onclick="filterF('burger',this)"><b>BURGERS<br>4 Items</b></div>
+<div class="fd" onclick="filterF('pizza',this)"><b>SPECIAL PIZZAS<br>9 Items</b></div>
+<div class="fd" onclick="filterF('wraps',this)"><b>WRAPS<br>9 Items</b></div>
+<div class="fd" onclick="filterF('hot',this)"><b>HOT & SPICY<br>6 Items</b></div>
+<div class="fd" onclick="filterF('coke',this)"><b>COLD DRINK<br>4 Items</b></div>
+</div>
+<div class="sec" data-f="all"><div class="secH"><h2>ALL ITEMS - Aap ka asli full menu - Same to Same</h2><span>32+ Items - 3 pics ka full menu</span></div><div class="grid" id="g-all"></div></div>
+<div class="sec" data-f="burger"><div class="secH"><h2>BURGERS - Burger ki photo - Aap ki pic se</h2><span>4 Items</span></div><div class="grid" id="g-burger"></div></div>
+<div class="sec" data-f="pizza"><div class="secH"><h2>SPECIAL PIZZAS - S/M/L/XL Size Select - Aap ki pic se</h2><span>9 Items</span></div><div class="grid" id="g-pizza"></div></div>
+<div class="sec" data-f="wraps"><div class="secH"><h2>WRAPS - Wraps ki photo - Aap ki pic se</h2><span>9 Items</span></div><div class="grid" id="g-wraps"></div></div>
+<div class="sec" data-f="hot"><div class="secH"><h2>HOT & SPICY - Wings/Nuggets photo - Aap ki pic se</h2><span>6 Items</span></div><div class="grid" id="g-hot"></div></div>
+<div class="sec" data-f="coke"><div class="secH"><h2>COLD DRINK - Coca-Cola Real Bottle Photo - Aap ki pic se</h2><span>4 Items - Rs 100/120/170/220</span></div><div class="grid" id="g-coke"></div></div>
+<div class="foot">Al Noor Colony, Gojra Road, Jhang Sadar • WhatsApp: 0370-6582482 • 04PM-01AM<br>© 2024 FOODIE • TEHZEEB FAST FOOD • Fast Delivery • All rights reserved</div>
+<div class="cartBox"><div id="list" style="font-size:11px;color:#aaa;max-height:70px;overflow:auto">Cart empty - Pizza ka size S/M/L/XL select karo phir +Add dabao</div><div style="display:flex;justify-content:space-between;margin-top:8px"><b>Items: <span id="cc2">0</span></b><b style="color:#ff8a2a">Total Rs <span id="tt">0</span></b></div><a id="waBtn" class="wa" href="#">WhatsApp Order Bhejo 🚀 - 0370-6582482</a></div>
+<script>
+const IMG_B="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACWAUADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhI
