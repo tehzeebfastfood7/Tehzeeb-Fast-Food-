@@ -1,37 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TEHZEEB FAST FOOD - FINAL REAL MENU - Same to Same</title><style>
-*{margin:0;padding:0;box-sizing:border-box}body{background:#0a0a0a;color:#fff;font-family:system-ui}
-.top{background:#000;display:flex;justify-content:space-between;padding:10px 12px;font-size:11px;border-bottom:1px solid #222;flex-wrap:wrap;gap:6px}
-.head{display:flex;justify-content:space-between;padding:16px}.logo{color:#ff8a2a;font-weight:900;font-size:22px}
-.folders{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 12px 14px}
-.fd{background:#1a1a1a;border:1px solid #ff8a2a66;border-radius:10px;padding:14px 6px;text-align:center;font-size:11px;cursor:pointer}
-.fd.on{background:#ff8a2a;color:#000}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.card{background:#1e1e1e;border-radius:10px;overflow:hidden;border:1px solid #333}.card img{width:100%;height:115px;object-fit:cover;background:#222;display:block}
-.in{padding:8px}.in b{font-size:11px;display:block}.in small{font-size:9px;color:#888}
-.btm{display:flex;justify-content:space-between;margin-top:7px}.pr{color:#ff8a2a;font-weight:900;font-size:11px}
-.add{background:#ff8a2a;color:#000;border:0;padding:5px 12px;border-radius:6px;font-weight:900;font-size:10px;cursor:pointer}
-.sizes{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:6px}.sz{background:#252525;border:1px solid #333;border-radius:6px;padding:5px 2px;font-size:9px;text-align:center;cursor:pointer}
-.sz.on{background:#ff8a2a;color:#000;font-weight:900}.foot{background:#000;border-top:2px solid #ff8a2a;padding:14px;text-align:center;font-size:10px;color:#aaa;line-height:1.5}
-.cartBox{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:94%;max-width:720px;background:#111;border:2px solid #ff8a2a;border-radius:16px;padding:12px;z-index:99}
-.wa{display:block;background:#25D366;color:#fff;text-align:center;padding:11px;border-radius:30px;text-decoration:none;font-weight:900;margin-top:8px}
-.sec{padding:0 12px 18px}.secH{display:flex;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap}.secH h2{font-size:14px}.secH span{color:#ff8a2a;font-size:11px}
-</style></head><body>
-<div class="top"><div>📍 Al Noor Colony, Gojra Road, Jhang Sadar</div><div>💚 0370-6582482</div><div>🕓 04PM-01AM</div></div>
-<div class="head"><div class="logo">🔥 FOODIE - TEHZEEB FAST FOOD</div><div>🛒<span id="cc" style="background:#ff8a2a;color:#000;padding:2px 6px;border-radius:50%;font-size:10px">0</span></div></div>
-<div class="folders">
-<div class="fd on" onclick="filterF('all',this)"><b>ALL ITEMS<br>32+ Items</b></div>
-<div class="fd" onclick="filterF('burger',this)"><b>BURGERS<br>4 Items</b></div>
-<div class="fd" onclick="filterF('pizza',this)"><b>SPECIAL PIZZAS<br>9 Items</b></div>
-<div class="fd" onclick="filterF('wraps',this)"><b>WRAPS<br>9 Items</b></div>
-<div class="fd" onclick="filterF('hot',this)"><b>HOT & SPICY<br>6 Items</b></div>
-<div class="fd" onclick="filterF('coke',this)"><b>COLD DRINK<br>4 Items</b></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>TEHZEEB FAST FOOD - Al Noor Colony</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#0f0f0f;color:#fff;padding-bottom:90px}
+.top{background:#000;padding:6px 10px;font-size:11px;display:flex;justify-content:space-between}
+.header{background:#111;padding:12px;text-align:center;border-bottom:2px solid #ffb400}
+.header h1{color:#ffb400;font-size:24px} .header p{font-size:12px;color:#aaa;margin-top:4px}
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:10px}
+.cat{background:#222;border:1px solid #333;border-radius:10px;padding:10px;text-align:center;font-size:11px;font-weight:bold;cursor:pointer}
+.cat.active{background:#ffb400;color:#000}
+.card{background:#1e1e1e;margin:8px 10px;border-radius:12px;display:flex;overflow:hidden;border:1px solid #2a2a2a}
+.card img{width:105px;height:105px;object-fit:cover}
+.info{padding:8px;flex:1}
+.info h3{font-size:13px} .info p{font-size:10px;color:#999;margin:3px 0}
+.price{color:#ffb400;font-weight:bold;font-size:13px}
+.sz{display:inline-block;border:1px solid #444;padding:3px 6px;border-radius:5px;font-size:10px;margin:2px;cursor:pointer;background:#222}
+.sz.active{background:#ffb400;color:#000}
+.btn{background:#ffb400;color:#000;border:none;padding:6px 10px;border-radius:6px;font-weight:bold;font-size:11px;margin-top:5px;width:100%}
+.cart{position:fixed;bottom:0;left:0;right:0;background:#1a1a1a;border-top:2px solid #ffb400;padding:10px;display:flex;justify-content:space-between;align-items:center}
+.order{background:#25D366;color:#fff;border:none;padding:10px 15px;border-radius:20px;font-weight:bold;font-size:12px}
+</style>
+</head>
+<body>
+<div class="top"><span>📍Al Noor Colony Gojra Road 5wan Meel, Jhang Sadar</span><span>04PM-01AM | 0370-6582482</span></div>
+<div class="header"><h1>TEHZEEB FAST FOOD</h1><p>Al Noor Colony Gojra Road 5wan Meel, Jhang Sadar - 0370-6582482 - 04PM-01AM</p></div>
+<div class="cats">
+<div class="cat active" onclick="filterCat('all',this)">ALL 32+ ITEMS</div>
+<div class="cat" onclick="filterCat('burgers',this)">BURGERS 4 Items</div>
+<div class="cat" onclick="filterCat('pizza',this)">SPECIAL PIZZA 9 Items</div>
+<div class="cat" onclick="filterCat('wraps',this)">WRAPS 9 Items</div>
+<div class="cat" onclick="filterCat('hot',this)">HOT & SPICY 6 Items</div>
+<div class="cat" onclick="filterCat('drink',this)">COLD DRINK 4 Items</div>
 </div>
-<div class="sec" data-f="all"><div class="secH"><h2>ALL ITEMS - Aap ka asli full menu - Same to Same</h2><span>32+ Items - 3 pics ka full menu</span></div><div class="grid" id="g-all"></div></div>
-<div class="sec" data-f="burger"><div class="secH"><h2>BURGERS - Burger ki photo - Aap ki pic se</h2><span>4 Items</span></div><div class="grid" id="g-burger"></div></div>
-<div class="sec" data-f="pizza"><div class="secH"><h2>SPECIAL PIZZAS - S/M/L/XL Size Select - Aap ki pic se</h2><span>9 Items</span></div><div class="grid" id="g-pizza"></div></div>
-<div class="sec" data-f="wraps"><div class="secH"><h2>WRAPS - Wraps ki photo - Aap ki pic se</h2><span>9 Items</span></div><div class="grid" id="g-wraps"></div></div>
-<div class="sec" data-f="hot"><div class="secH"><h2>HOT & SPICY - Wings/Nuggets photo - Aap ki pic se</h2><span>6 Items</span></div><div class="grid" id="g-hot"></div></div>
-<div class="sec" data-f="coke"><div class="secH"><h2>COLD DRINK - Coca-Cola Real Bottle Photo - Aap ki pic se</h2><span>4 Items - Rs 100/120/170/220</span></div><div class="grid" id="g-coke"></div></div>
-<div class="foot">Al Noor Colony, Gojra Road, Jhang Sadar • WhatsApp: 0370-6582482 • 04PM-01AM<br>© 2024 FOODIE • TEHZEEB FAST FOOD • Fast Delivery • All rights reserved</div>
-<div class="cartBox"><div id="list" style="font-size:11px;color:#aaa;max-height:70px;overflow:auto">Cart empty - Pizza ka size S/M/L/XL select karo phir +Add dabao</div><div style="display:flex;justify-content:space-between;margin-top:8px"><b>Items: <span id="cc2">0</span></b><b style="color:#ff8a2a">Total Rs <span id="tt">0</span></b></div><a id="waBtn" class="wa" href="#">WhatsApp Order Bhejo 🚀 - 0370-6582482</a></div>
+<div id="menu"></div>
+<div class="cart"><div><div id="count">Items: 0</div><b id="total">Total Rs 0</b></div><button class="order" onclick="orderNow()">WhatsApp Order Bhejo</button></div>
 <script>
-const IMG_B="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACWAUADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhI
+const data=[
+{c:'burgers',n:'Zinger Burger',p:350,img:'https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=300',d:'Crispy Zinger'},
+{c:'burgers',n:'Zinger Max Burger',p:700,img:'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=300',d:'Double Zinger Cheese'},
+{c:'burgers',n:'Tower Burger',p:600,img:'https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=300',d:'2 Patty Special'},
+{c:'burgers',n:'Chicken Patty Burger',p:280,img:'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=300',d:'Juicy Patty'},
+{c:'pizza',n:'Chicken Tikka Pizza',s:{S:600,M:1350,L:1650,XL:2250},img:'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=300',d:'Tikka Cheese'},
+{c:'pizza',n:'Chicken Fajita Pizza',s:{S:600,M:1350,L:1650,XL:2250},img:'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300',d:'Fajita Special'},
+{c:'pizza',n:'Tehzeeb Special Pizza',s:{S:700,M:1550,L:1850,XL:2500},img:'https://images.unsplash.com/photo-1598023696416-0193a0bcd302?w=300',d:'Loaded Special'},
+{c:'pizza',n:'Malai Boti Pizza',s:{S:650,M:1450,L:1750,XL:2350},img:'https://images.unsplash.com/photo-1628840042765-356cda07504e?w=300',d:'Creamy Malai'},
+{c:'pizza',n:'Behari Kabab Pizza',s:{S:650,M:1450,L:1750,XL:2350},img:'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=300',d:'Behari Spicy'},
+{c:'pizza',n:'Pepperoni Pizza',s:{S:600,M:1350,L:1650,XL:2250},img:'https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?w=300',d:'Pepperoni'},
+{c:'pizza',n:'Veg Lover Pizza',s:{S:550,M:1200,L:1500,XL:2000},img:'https://images.unsplash.com/photo-1579751626657-72bc17010498?w=300',d:'Vegies Corn'},
+{c:'pizza',n:'Chicken Supreme Pizza',s:{S:650,M:1400,L:1700,XL:2300},img:'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=300',d:'Mushroom Capsicum'},
+{c:'pizza',n:'Cheese Lover Pizza',s:{S:600,M:1350,L:1650,XL:2250},img:'https://images.unsplash.com/photo-1604382355076-af4b54d21126?w=300',d:'Extra Cheese'},
+{c:'wraps',n:'Zinger Wrap',p:350,img:'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=300',d:'Crispy Wrap'},
+{c:'wraps',n:'Chicken Wrap',p:300,img:'https://images.unsplash.com/photo-1548943487-a2e4e43b4853?w=300',d:'Grilled Chicken'},
+{c:'wraps',n:'Tikka Wrap',p:320,img:'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=300',d:'Tikka Spicy'},
+{c:'wraps',n:'Malai Boti Wrap',p:380,img:'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=300',d:'Malai Creamy'},
+{c:'wraps',n:'Behari Wrap',p:380,img:'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=300',d:'Behari Kabab'},
+{c:'wraps',n:'Fajita Wrap',p:340,img:'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=300',d:'Fajita'},
+{c:'wraps',n:'Cheese Wrap',p:360,img:'https://images.unsplash.com/photo-1604908177223-81e3365605f0?w=300',d:'Cheese Loaded'},
+{c:'wraps',n:'Club Wrap',p:400,img:'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=300',d:'Club Special'},
+{c:'wraps',n:'Tehzeeb Special Wrap',p:450,img:'https://images.unsplash.com/photo-1619860860774-1e2e17343432?w=300',d:'Special Loaded'},
+{c:'hot',n:'Hot Wings 6 Pcs',p:450,img:'https://images.unsplash.com/photo-1527477396000-e27163b489c2?w=300',d:'Spicy Wings'},
+{c:'hot',n:'Hot Wings 10 Pcs',p:700,img:'https://images.unsplash.com/photo-1608039824140-e0bbfdc4b298?w=300',d:'10 Pcs Wings'},
+{c:'hot',n:'Chicken Nuggets 6 Pcs',p:350,img:'https://images.unsplash.com/photo-1562967914-608f82629710?w=300',d:'Crispy Nuggets'},
+{c:'hot',n:'Nuggets 10 Pcs',p:550,img:'https://images.unsplash.com/photo-1585325701956-60dd9c8553bc?w=300',d:'10 Pcs Nuggets'},
+{c:'hot',n:'Loaded Fries',p:400,img:'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=300',d:'Cheese Chicken Fries'},
+{c:'hot',n:'Plain Fries',p:200,img:'https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=300',d:'French Fries'},
+{c:'drink',n:'Coca-Cola 345ml',p:100,img:'https://images.unsplash.com/photo-1624552184280-9e9631bbeee9?w=
