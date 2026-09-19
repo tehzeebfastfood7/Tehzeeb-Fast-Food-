@@ -3,75 +3,146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TEHZEEB FAST FOOD - Al Noor Colony Gojra Road 5wan Meel Jhang</title>
+<title>Tehzeeb Fast Food - Al Noor Colony Gojra Road 5wan Meel</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#0a0a0a;color:#fff;padding-bottom:110px}
-.topbar{background:#000;color:#bbb;padding:8px 10px;font-size:10px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;position:sticky;top:0;z-index:100;border-bottom:1px solid #222}
-.header{background:linear-gradient(135deg,#111,#1a1a1a);padding:15px;text-align:center;border-bottom:3px solid #ffb400}
-.header h1{color:#ffb400;font-size:28px;font-weight:800;letter-spacing:1px}
+body{background:#0a0a0a;color:#fff;padding-bottom:120px}
+.topbar{background:#000;color:#ffb400;padding:10px;text-align:center;font-size:11px;font-weight:700;position:sticky;top:0;z-index:100;border-bottom:2px solid #ffb400}
+.header{background:#111;padding:18px 12px;text-align:center;border-bottom:3px solid #ffb400}
+.header h1{color:#ffb400;font-size:30px;font-weight:800}
 .header h1 span{color:#fff}
-.header .info{font-size:11px;color:#ccc;margin-top:6px;line-height:1.5}
-.cats{display:flex;overflow-x:auto;gap:8px;padding:12px 10px;scrollbar-width:none;position:sticky;top:32px;background:#0a0a0a;z-index:90}
+.header.sub{color:#ccc;font-size:11px;margin-top:8px;line-height:1.6}
+.cats{display:flex;overflow-x:auto;gap:10px;padding:14px 10px;background:#0a0a0a;position:sticky;top:38px;z-index:90;border-bottom:1px solid #222}
 .cats::-webkit-scrollbar{display:none}
-.cat{min-width:90px;background:#1e1e1e;border:2px solid #2a2a2a;border-radius:14px;padding:10px 8px;text-align:center;cursor:pointer;flex-shrink:0}
-.cat.active{background:#ffb400;color:#000;border-color:#ffb400}
-.cat b{font-size:10px;display:block;white-space:nowrap}
-.cat small{font-size:8px;color:#888;display:block;margin-top:2px}.cat.active small{color:#000}
-.cat img{width:40px;height:40px;border-radius:50%;object-fit:cover;margin-bottom:4px;background:#222}
-.menu{padding:0 10px}
-.sec{color:#ffb400;font-weight:800;font-size:14px;margin:20px 0 10px;display:flex;align-items:center;gap:8px}
-.sec span{background:#ffb400;color:#000;font-size:9px;padding:3px 7px;border-radius:10px}
-.card{background:#171717;border:1px solid #262626;border-radius:16px;display:flex;overflow:hidden;margin-bottom:12px;position:relative}
-.card img{width:115px;height:115px;object-fit:cover;background:#222;flex-shrink:0}
-.card-body{flex:1;padding:10px;display:flex;flex-direction:column;justify-content:space-between}
-.card-body h3{font-size:13px;font-weight:700;line-height:1.2}
-.card-body .desc{font-size:10px;color:#999;margin:3px 0}
-.price{color:#ffb400;font-weight:800;font-size:13px;margin:4px 0}
-.sizes{display:flex;gap:5px;flex-wrap:wrap;margin:5px 0}
-.sz{border:1.5px solid #3a3a3a;background:#222;color:#fff;padding:4px 8px;border-radius:8px;font-size:10px;cursor:pointer;font-weight:600}
-.sz.active{background:#ffb400;color:#000;border-color:#ffb400;font-weight:800}
-.add{ background:#ffb400;color:#000;border:none;padding:7px;border-radius:10px;font-weight:800;font-size:11px;cursor:pointer;width:100%;margin-top:6px}
-.cartbar{position:fixed;bottom:0;left:0;right:0;background:#161616;border-top:3px solid #ffb400;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;z-index:200}
-.order{background:#25D366;color:#fff;border:none;padding:12px 18px;border-radius:30px;font-weight:800;font-size:12px;cursor:pointer}
+.cat{min-width:95px;background:#1e1e1e;border:2px solid #333;border-radius:16px;padding:12px 8px;text-align:center;cursor:pointer;flex-shrink:0}
+.cat.active{background:#ffb400;border-color:#ffb400;color:#000}
+.cat b{font-size:11px;display:block}
+.cat small{font-size:9px;opacity:0.7}
+.card{background:#171717;border:1px solid #2a2a2a;border-radius:18px;display:flex;overflow:hidden;margin-bottom:14px}
+.card img{width:110px;height:110px;object-fit:cover;background:#222}
+.card-body{flex:1;padding:12px;display:flex;flex-direction:column;justify-content:space-between}
+.card-body h3{font-size:14px;font-weight:700}
+.price{color:#ffb400;font-weight:800;font-size:14px;margin:6px 0}
+.szrow{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
+.sz{background:#252525;border:1px solid #444;color:#fff;padding:5px 10px;border-radius:10px;font-size:11px;font-weight:700;cursor:pointer}
+.sz.active{background:#ffb400;color:#000;border-color:#ffb400}
+.add{background:#ffb400;color:#000;border:none;padding:10px;border-radius:12px;font-weight:800;font-size:12px;width:100%;margin-top:8px}
+.cartbar{position:fixed;bottom:0;left:0;right:0;background:#161616;border-top:3px solid #ffb400;padding:14px;display:flex;justify-content:space-between;align-items:center;z-index:999}
+.order{background:#25D366;color:#fff;border:none;padding:14px 20px;border-radius:30px;font-weight:800;font-size:13px}
+.sec{color:#ffb400;font-weight:800;font-size:15px;margin:22px 0 12px;padding-left:4px;border-left:4px solid #ffb400}
 </style>
 </head>
 <body>
-<div class="topbar"><span>📍 Al Noor Colony Gojra Road 5wan Meel, Jhang Sadar</span><span>📞 0370-6582482 | 🕓 04PM - 01AM</span></div>
-<div class="header"><h1>TEHZEEB <span>FAST FOOD</span></h1><div class="info">Al Noor Colony Gojra Road 5wan Meel, Jhang Sadar<br>Home Delivery | 0370-6582482 | Timing 04PM - 01AM</div></div>
-<div class="cats">
-<div class="cat active" onclick="filterCat('all',this)"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=100"><b>ALL ITEMS</b><small>40+ Items</small></div>
-<div class="cat" onclick="filterCat('pizza',this)"><img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=100"><b>SPECIAL PIZZAS</b><small>9 Pizzas</small></div>
-<div class="cat" onclick="filterCat('burgers',this)"><img src="https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=100"><b>BURGERS</b><small>4 Items</small></div>
-<div class="cat" onclick="filterCat('wraps',this)"><img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=100"><b>WRAPS</b><small>9 Rolls</small></div>
-<div class="cat" onclick="filterCat('hot',this)"><img src="https://images.unsplash.com/photo-1527477396000-e27163b489c2?w=100"><b>HOT & SPICY</b><small>6 Items</small></div>
-<div class="cat" onclick="filterCat('pasta',this)"><img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=100"><b>PASTA & FRIES</b><small>5 Items</small></div>
-<div class="cat" onclick="filterCat('sandwich',this)"><img src="https://images.unsplash.com/photo-1521390188846-e2a3a97453a0?w=100"><b>SANDWICH</b><small>2 Items</small></div>
-<div class="cat" onclick="filterCat('platter',this)"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=100"><b>PLATTER</b><small>2 Platters</small></div>
-<div class="cat" onclick="filterCat('qulfi',this)"><img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=100"><b>QULFI</b><small>Ice Cream</small></div>
-<div class="cat" onclick="filterCat('drink',this)"><img src="https://images.unsplash.com/photo-1624552184280-9e9631bbeee9?w=100"><b>COLD DRINK</b><small>Coca-Cola</small></div>
+<div class="topbar">📍 Al Noor Colony Gojra Road 5wan Meel | 📞 0370-6582482 | 🕓 04PM - 01AM</div>
+<div class="header"><h1>TEHZEEB <span>FAST FOOD</span></h1><div class="sub">Al Noor Colony Gojra Road 5wan Meel<br>Home Delivery | 0370-6582482 | Timing 04PM - 01AM</div></div>
+<div class="cats" id="cats">
+<div class="cat active" data-c="all"><b>ALL</b><small>41 Items</small></div>
+<div class="cat" data-c="pizza"><b>PIZZAS</b><small>9</small></div>
+<div class="cat" data-c="burgers"><b>BURGERS</b><small>4</small></div>
+<div class="cat" data-c="wraps"><b>WRAPS</b><small>9</small></div>
+<div class="cat" data-c="hot"><b>HOT</b><small>6</small></div>
+<div class="cat" data-c="pasta"><b>PASTA</b><small>5</small></div>
+<div class="cat" data-c="qulfi"><b>QULFI</b><small>6</small></div>
+<div class="cat" data-c="drink"><b>DRINKS</b><small>4</small></div>
 </div>
 <div class="menu" id="menu"></div>
-<div class="cartbar"><div><div id="cnt" style="font-size:11px;color:#aaa">Items: 0</div><div id="tot" style="font-weight:800;font-size:14px">Total Rs 0</div></div><button class="order" onclick="orderNow()">🟢 WhatsApp Order 0370-6582482</button></div>
+<div class="cartbar"><div><div id="cnt">Items: 0</div><div id="tot" style="font-weight:800;font-size:16px">Total Rs 0</div></div><button class="order" id="orderBtn">WhatsApp Order</button></div>
 <script>
-const data=[
-{c:'pizza',n:'Tehzeeb Special Pizza',s:{S:600,M:1350,L:1650,XL:2250},img:'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400',d:'Our Special Signature Pizza'},
-{c:'pizza',n:'Cheese Crust Pizza',s:{S:600,M:1450,L:1750,XL:2300},img:'https://images.unsplash.com/photo-1598023696416-0193a0bcd302?w=400',d:'Cheese Filled Crust'},
-{c:'pizza',n:'Kabab Crust Pizza',s:{S:600,M:1450,L:1750,XL:2300},img:'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400',d:'Kabab Crust Special'},
-{c:'pizza',n:'Behari Kabab Pizza',s:{S:600,M:1450,L:1750,XL:2300},img:'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=400',d:'Behari Kabab Flavour'},
-{c:'pizza',n:'Smoked Pizza',s:{S:600,M:1400,L:1650,XL:2200},img:'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400',d:'Smoked Chicken Tikka'},
-{c:'pizza',n:'Malai Boti Pizza',s:{S:600,M:1480,L:1800,XL:2350},img:'https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400',d:'Creamy Malai Boti'},
-{c:'pizza',n:'Achari Kabab Pizza',s:{S:600,M:1500,L:1800,XL:2350},img:'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400',d:'Achari Kabab Spicy'},
-{c:'pizza',n:'Crown Crust Pizza',s:{S:600,M:1500,L:1800,XL:2350},img:'https://images.unsplash.com/photo-1604382355076-af4b54d21126?w=400',d:'Crown Shape Crust'},
-{c:'pizza',n:'Royal Crust Pizza',s:{S:600,M:1650,L:2000,XL:2600},img:'https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?w=400',d:'Royal Special Crust - Premium'},
-{c:'burgers',n:'Zinger Burger',p:350,img:'https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=400',d:'Crispy Zinger Fillet, Mayo'},
-{c:'burgers',n:'Zinger Max Burger',p:700,img:'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400',d:'Double Zinger, Extra Cheese'},
-{c:'burgers',n:'Tower Burger',p:600,img:'https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400',d:'2 Patty Tower, Special Sauce'},
-{c:'burgers',n:'Petty Burger',p:280,img:'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400',d:'Juicy Chicken Patty'},
-{c:'wraps',n:'Zinger Paratha Roll',p:430,img:'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400',d:'Zinger + Paratha Roll'},
-{c:'wraps',n:'Zinger Shawarma (L)',p:380,img:'https://images.unsplash.com/photo-1548943487-a2e4e43b4853?w=400',d:'Large Zinger Shawarma'},
-{c:'wraps',n:'Zinger Shawarma (M)',p:250,img:'https://images.unsplash.com/photo-1548943487-a2e4e43b4853?w=400',d:'Medium Zinger Shawarma'},
-{c:'wraps',n:'Nuggets Shawarma',p:280,img:'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400',d:'Nuggets Shawarma Special'},
-{c:'wraps',n:'Chicken Paratha',p:280,img:'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400',d:'Chicken Paratha Roll'},
-{c:'wraps',n:'Chicken Shawarma',p:180,img:'https://images.unsplash
+const items=[
+{id:0,c:'pizza',n:'Tehzeeb Special Pizza',d:'Signature Special',s:[{k:'S',p:600},{k:'M',p:1350},{k:'L',p:1650},{k:'XL',p:2250}]},
+{id:1,c:'pizza',n:'Cheese Crust Pizza',d:'Cheese Filled Crust',s:[{k:'S',p:600},{k:'M',p:1450},{k:'L',p:1750},{k:'XL',p:2300}]},
+{id:2,c:'pizza',n:'Kabab Crust Pizza',d:'Kabab Crust Special',s:[{k:'S',p:600},{k:'M',p:1450},{k:'L',p:1750},{k:'XL',p:2300}]},
+{id:3,c:'pizza',n:'Behari Kabab Pizza',d:'Behari Kabab Flavour',s:[{k:'S',p:600},{k:'M',p:1450},{k:'L',p:1750},{k:'XL',p:2300}]},
+{id:4,c:'pizza',n:'Smoked Pizza',d:'Smoked Chicken Tikka',s:[{k:'S',p:600},{k:'M',p:1400},{k:'L',p:1650},{k:'XL',p:2200}]},
+{id:5,c:'pizza',n:'Malai Boti Pizza',d:'Creamy Malai Boti',s:[{k:'S',p:600},{k:'M',p:1480},{k:'L',p:1800},{k:'XL',p:2350}]},
+{id:6,c:'pizza',n:'Achari Kabab Pizza',d:'Achari Kabab Spicy',s:[{k:'S',p:600},{k:'M',p:1500},{k:'L',p:1800},{k:'XL',p:2350}]},
+{id:7,c:'pizza',n:'Crown Crust Pizza',d:'Crown Shape Crust',s:[{k:'S',p:600},{k:'M',p:1500},{k:'L',p:1800},{k:'XL',p:2350}]},
+{id:8,c:'pizza',n:'Royal Crust Pizza',d:'Royal Special Premium',s:[{k:'S',p:600},{k:'M',p:1650},{k:'L',p:2000},{k:'XL',p:2600}]},
+{id:9,c:'burgers',n:'Zinger Burger',d:'Crispy Zinger Fillet',p:350},
+{id:10,c:'burgers',n:'Zinger Max Burger',d:'Double Zinger',p:700},
+{id:11,c:'burgers',n:'Tower Burger',d:'2 Patty Tower',p:600},
+{id:12,c:'burgers',n:'Petty Burger',d:'Chicken Patty Burger',p:280},
+{id:13,c:'wraps',n:'Zinger Paratha Roll',d:'Zinger + Paratha Roll',p:430},
+{id:14,c:'wraps',n:'Zinger Shawarma (L)',d:'Large Shawarma',p:380},
+{id:15,c:'wraps',n:'Zinger Shawarma (M)',d:'Medium Shawarma',p:250},
+{id:16,c:'wraps',n:'Nuggets Shawarma',d:'Nuggets Shawarma',p:280},
+{id:17,c:'wraps',n:'Chicken Paratha',d:'Chicken Paratha Roll',p:280},
+{id:18,c:'wraps',n:'Chicken Shawarma',d:'Classic Shawarma',p:180},
+{id:19,c:'wraps',n:'Chicken Cheese Shawarma',d:'Cheese + Chicken',p:280},
+{id:20,c:'wraps',n:'Spin Roll',d:'Spin Roll Special',p:600},
+{id:21,c:'wraps',n:'Malai Boti Roll',d:'Malai Boti Creamy Roll',p:380},
+{id:22,c:'hot',n:'Hot Wings (5P)',d:'5 Pcs Spicy Hot Wings',p:500},
+{id:23,c:'hot',n:'Hot Wings (10P)',d:'10 Pcs Hot Wings',p:900},
+{id:24,c:'hot',n:'Nuggets (5P)',d:'5 Pcs Crispy Nuggets',p:300},
+{id:25,c:'hot',n:'Nuggets (10P)',d:'10 Pcs Nuggets',p:550},
+{id:26,c:'hot',n:'Grilled Wings (5P)',d:'5 Pcs Grilled Wings',p:400},
+{id:27,c:'hot',n:'Grilled Wings (10P)',d:'10 Pcs Grilled Wings',p:700},
+{id:28,c:'pasta',n:'Flaming Pasta',d:'Flaming Hot Pasta',s:[{k:'Reg',p:450},{k:'Large',p:750}]},
+{id:33,c:'sandwich',n:'Mexican Sandwich',d:'Mexican Spicy',p:650},
+{id:34,c:'sandwich',n:'Special Sandwich',d:'Tehzeeb Special',p:750},
+{id:35,c:'platter',n:'Behari Platter',d:'Behari Kabab Platter',p:850},
+{id:36,c:'platter',n:'Special Platter',d:'Special Mix Platter',p:950},
+{id:37,c:'qulfi',n:'Special Qulfi Small',d:'Small Qulfi Cup',p:50},
+{id:38,c:'qulfi',n:'Special Qulfi Medium',d:'Medium Qulfi',p:70},
+{id:39,c:'qulfi',n:'Special Qulfi Large',d:'Large Qulfi',p:100},
+{id:40,c:'qulfi',n:'Ice Cream 1 Scoop',d:'Qulfa Vanilla Strawberry',p:70},
+{id:43,c:'drink',n:'Coca-Cola 350 ML',d:'350ml Chilled',p:100},
+{id:44,c:'drink',n:'Coca-Cola 500 ML',d:'500ml Bottle',p:120},
+{id:45,c:'drink',n:'Coca-Cola 1 L',d:'1 Liter Family',p:170},
+{id:46,c:'drink',n:'Coca-Cola 1.5 L',d:'1.5 Liter Party',p:220},
+];
+let cart=[],currentCat='all',selected={};
+function getPrice(it){if(it.s){let sel=selected[it.id];if(!sel) sel=it.s[0];return sel;}return {k:'',p:it.p};}
+function render(){
+const menu=document.getElementById('menu');menu.innerHTML='';
+let list=currentCat==='all'?items:items.filter(i=>i.c===currentCat);
+let groups={};list.forEach(it=>{if(!groups[it.c]) groups[it.c]=[];groups[it.c].push(it);});
+let order=['pizza','burgers','wraps','hot','pasta','sandwich','platter','qulfi','drink'];
+let catsToShow=currentCat==='all'?order:[currentCat];
+catsToShow.forEach(cat=>{
+let arr=groups[cat]||[];if(arr.length===0) return;
+let title={pizza:'🍕 SPECIAL PIZZAS',burgers:'🍔 BURGERS',wraps:'🌯 WRAPS & ROLLS',hot:'🍗 HOT & SPICY',pasta:'🍝 PASTA & FRIES',sandwich:'🥪 SANDWICH',platter:'🍱 PLATTER',qulfi:'🍦 QULFI & ICE CREAM',drink:'🥤 COLD DRINKS'}[cat];
+menu.innerHTML+=`<div class="sec">${title} - ${arr.length} Items</div>`;
+arr.forEach(it=>{
+let priceText='',sizeHtml='';
+if(it.s){
+if(!selected[it.id]) selected[it.id]=it.s[0];
+priceText=it.s.map(x=>x.k+' Rs '+x.p).join(' | ');
+sizeHtml='<div class="szrow">'+it.s.map(x=>`<span class="sz ${selected[it.id].k===x.k?'active':''}" data-id="${it.id}" data-k="${x.k}" data-p="${x.p}">${x.k} ${x.p}</span>`).join('')+'</div>';
+}else{priceText='Rs '+it.p;}
+menu.innerHTML+=`<div class="card"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200"><div class="card-body"><div><h3>${it.n}</h3><div style="font-size:11px;color:#999">${it.d}</div><div class="price">${priceText}</div>${sizeHtml}</div><button class="add" data-id="${it.id}">Add to Cart +</button></div></div>`;
+});
+});
+document.querySelectorAll('.sz').forEach(el=>{
+el.addEventListener('click',function(){
+let id=parseInt(this.dataset.id);selected[id]={k:this.dataset.k,p:parseInt(this.dataset.p)};
+this.parentElement.querySelectorAll('.sz').forEach(s=>s.classList.remove('active'));this.classList.add('active');
+});
+});
+document.querySelectorAll('.add').forEach(btn=>{
+btn.addEventListener('click',function(){
+let id=parseInt(this.dataset.id);let it=items.find(x=>x.id===id);let pr=getPrice(it);
+let name=pr.k?it.n+' ('+pr.k+')':it.n;cart.push({name:name,price:pr.p});
+document.getElementById('cnt').innerText='Items: '+cart.length;
+let total=cart.reduce((a,b)=>a+b.price,0);document.getElementById('tot').innerText='Total Rs '+total;
+this.innerText='Added ✅';setTimeout(()=>{this.innerText='Add to Cart +';},800);
+});
+});
+}
+document.querySelectorAll('.cat').forEach(c=>{
+c.addEventListener('click',function(){
+document.querySelectorAll('.cat').forEach(x=>x.classList.remove('active'));this.classList.add('active');currentCat=this.dataset.c;render();
+});
+});
+document.getElementById('orderBtn').addEventListener('click',function(){
+if(cart.length===0){alert('Pehle item Add to Cart karo!');return;}
+let total=cart.reduce((a,b)=>a+b.price,0);
+let txt='*TEHZEEB FAST FOOD ORDER*%0A📍 Al Noor Colony Gojra Road 5wan Meel%0A📞 0370-6582482%0A%0A';
+cart.forEach((it,i)=>{txt+=(i+1)+'. '+it.name+' - Rs '+it.price+'%0A';});
+txt+='%0A*Total: Rs '+total+'*%0A';window.open('https://wa.me/923706582482?text='+txt,'_blank');
+});
+render();
+</script>
+</body>
+</html>
